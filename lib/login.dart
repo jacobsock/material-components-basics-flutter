@@ -22,7 +22,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // TODO: Add text editing controllers (101)
+  
+  //Controllers used for controlling text input
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   @override
@@ -41,10 +42,8 @@ class _LoginPageState extends State<LoginPage> {
                 Text("hi"),
               ],
             ),
-            const SizedBox(height: 120.0),
+            const SizedBox(height: 120.0), //spacer 
             // TODO: Remove filled: true values (103)
-            // TODO: Add TextField widgets (101)
-
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(
@@ -52,9 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: 'Username',
               ),
             ),
-// spacer
-            const SizedBox(height: 120.0),
-// [Password]
+            const SizedBox(height: 120.0), //spacer
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
@@ -63,20 +60,16 @@ class _LoginPageState extends State<LoginPage> {
               ),
               obscureText: true,
             ),
-
-            // TODO: Add button bar (101)
-
+            //Overflow bar automatically arranges children in a row
             OverflowBar(
               alignment: MainAxisAlignment.end,
               // TODO: Add a beveled rectangular border to CANCEL (103)
               children: <Widget>[
-                // TODO: Add buttons (101)
                 TextButton(
                   child: const Text('CANCEL'),
                   onPressed: () {
-                    // TODO: Clear the text fields (101)
-                     _usernameController.clear();
-                     _passwordController.clear();
+                    _usernameController.clear();
+                    _passwordController.clear();
                   },
                 ),
                 // TODO: Add an elevation to NEXT (103)
@@ -84,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   child: const Text('NEXT'),
                   onPressed: () {
-                    // TODO: Show the next page (101)
+                    //In app.dart /login route is inital route so popping it results in /home
                     Navigator.pop(context);
                   },
                 ),
