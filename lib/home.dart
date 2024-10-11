@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
               child: Image.asset(
                 product.assetName,
                 package: product.assetPackage,
-                // TODO: Adjust the box size (102)
+                fit: BoxFit.fitWidth,
               ),
             ),
             Expanded(
