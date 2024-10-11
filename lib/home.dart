@@ -63,14 +63,19 @@ class HomePage extends StatelessWidget {
       body: GridView.count(
         crossAxisCount: 3,
         padding: const EdgeInsets.all(16.0),
+        //The parent GridView, defines aspect ratio for children (Cards).
         childAspectRatio: 8.0 / 9.0,
-        // TODO: Build a grid of cards (102)
         children: <Widget>[
           Card(
+            surfaceTintColor: const Color.fromARGB(255, 47, 133, 176),
+            shadowColor: Colors.orange,
+            elevation: 50,
             clipBehavior: Clip.antiAlias,
+            
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                //defines the aspect ratio the image regardless of shape
                 AspectRatio(
                   aspectRatio: 18.0 / 11.0,
                   child: Image.asset('assets/diamond.png'),
